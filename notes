@@ -1,0 +1,37 @@
+[] - User can create, read, update and delete an order
+
+Interface:
+- User can view order form 
+- User can submit order form
+- User can edit order 
+- User can delete order 
+
+User class
+    - attributes => name, password
+    - user signs up/logs in 
+    - has many orders 
+
+User controller and views
+    - '/users/signup' => renders sign up form
+    - '/users/signup' => processes sign up form, creates user, post
+    - '/users/login' => renders login form 
+    - '/users/login' => processes login form, post 
+    - need to set sessions
+    - user can view their orders, '/users/:id/orders'
+
+Orders class
+    - attributes => address, item, item_price, total
+    - order belongs to user
+
+Order controller and views
+    - '/orders/new => renders new order form
+    - '/orders' => submits order 
+    - '/orders' => renders all orders
+    - '/orders/:id => renders one instance
+    - '/orders/:id/edit => renders update form for an instance
+    - '/orders/:id => updates instance
+    - '/orders/:id:/delete' => deletes instance
+
+
+
+
