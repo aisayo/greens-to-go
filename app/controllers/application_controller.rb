@@ -13,4 +13,13 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+
+  helpers do 
+
+    def logged_in? #return a true of false value 
+      !!session[:user_id]
+    end 
+
+  end 
+
 end
