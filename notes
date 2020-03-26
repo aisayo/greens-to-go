@@ -8,16 +8,16 @@ Interface:
 
 User class
     x attributes => name, password
-    - user signs up/logs in 
+    x user signs up/logs in 
     x has many orders 
 
 User controller and views
     x '/users/signup' => renders sign up form
     x '/users/signup' => processes sign up form, creates user, post
-    - '/users/login' => renders login form 
-    - '/users/login' => processes login form, post 
-    - need to set sessions
-    - user can view their orders, '/users/:id/orders'
+    x '/users/login' => renders login form 
+    x '/users/login' => processes login form, post 
+    x need to set sessions
+    x user can view their orders, '/users/:id/orders'
 
 Orders class
     x attributes => address, item, item_price, total
@@ -55,8 +55,8 @@ authentication:
 
 
 user is logged in?
-- redirect to homepage, if logged in
-- cant see the signup or login form if logged in 
+x redirect to homepage, if logged in
+x cant see the signup or login form if logged in 
 
 helper methods
 
