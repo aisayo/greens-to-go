@@ -46,6 +46,10 @@ class OrderController < ApplicationController
         redirect '/orders'
     end 
 
+    get '/about' do 
+        "this is an about page"
+    end 
+
 
 
 end 

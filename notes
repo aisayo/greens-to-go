@@ -62,3 +62,16 @@ helper methods
 
 - application controller => methods available to controllers
 - app/helpers => helper methods used in your views 
+
+
+artlicles new  get '/articles/new'
+=> see the form to create an article 
+=> get request => just showing something 
+
+
+
+post request 
+=> where a user creates a new article? 
+
+
+
