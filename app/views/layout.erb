@@ -20,6 +20,10 @@
         <a href="/users/login"> Login </a>
         <a href=""> Menu </a>
 
+        <% if logged_in?%>
+          <a href="/logout"> Logout </a>
+        <% end %>
+
     </div>
 
     <div class="wrapper">
@@ -55,6 +59,7 @@
   text-decoration: none;
   font-size: 17px;
 }
+
 
 .topnav a:hover {
   background-color: #ddd;
