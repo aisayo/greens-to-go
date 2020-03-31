@@ -54,24 +54,8 @@ authentication:
 3. change our users table, password => password_digest
 
 
-user is logged in?
-x redirect to homepage, if logged in
-x cant see the signup or login form if logged in 
-
-helper methods
-
-- application controller => methods available to controllers
-- app/helpers => helper methods used in your views 
-
-
-artlicles new  get '/articles/new'
-=> see the form to create an article 
-=> get request => just showing something 
-
-
-
-post request 
-=> where a user creates a new article? 
-
-
-
+Goals:
+    - fix navbar
+    - fix sign up form 
+    - add welcome text to home page 
+    - 

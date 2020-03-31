@@ -1,7 +1,11 @@
 class OrderController < ApplicationController
 
     get '/orders/new' do 
-        erb :'/orders/new'
+        if logged_in?
+            erb :'/orders/new'
+        else 
+            redirect "/users/login"
+        end 
     end 
 
     post '/orders' do 

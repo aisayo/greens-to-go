@@ -11,13 +11,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
    </head>
   <body>
 
     <div class="navbar">
-      <ul>
-        <li><a href="/">Home</a></li>
-      </ul>
+        <a href="/">Home</a>
+        <a href="/users/signup">Sign Up</a>
+        <a href="/users/login"> Login </a>
+        <a href=""> Menu </a>
+
     </div>
 
     <div class="wrapper">
@@ -36,3 +40,31 @@
     <![endif]-->
   </body>
 </html>
+
+
+<style>
+.navbar {
+  background-color: #99dcf7;
+  overflow: hidden;
+  margin: 0;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  /* text-align: center; */
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
