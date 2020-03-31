@@ -16,8 +16,12 @@
 
     <div class="navbar">
         <a href="/">Home</a>
-        <a href="/users/signup">Sign Up</a>
-        <a href="/users/login"> Login </a>
+        
+        <% if !logged_in?%>
+          <a href="/users/signup">Sign Up</a>
+          <a href="/users/login"> Login </a>
+        <% end %>
+
         <a href=""> Menu </a>
 
         <% if logged_in?%>
