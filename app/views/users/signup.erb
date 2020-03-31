@@ -1,10 +1,29 @@
 <div class="signup">
     <h1> Create an Account </h1>
 
-    <form class="form" action='/users/signup' method="POST">
-        Username: <input type=text name="username"><br>
-        <br>
-        Password: <input type=password name="password"><br>
+    <form action='/users/signup' method="POST">
+        <label> First Name </label>
+            <input type=text name="first_name"><br>
+        <label> Last Name </label>
+            <input type=text name="last_name"><br>
+        <label> Address Line 1 </label>
+            <input type=text name="address_1"><br>
+        <label> Address Line 2 </label>
+            <input type=text name="address_2"><br>
+        <label> City </label>
+            <input type=text name="city"><br>
+        <label> State </label>
+            <input type=text name="state"><br>
+        <label> Zip/Postal Code </label>
+            <input type=number name="zip"><br>
+        <label> Username </label>
+            <input type=text name="username"><br>
+        <label> Email </label>
+            <input type=text name="email"><br>
+        <label> Password </label>
+            <input type=password name="password"><br>
+        <label> Password Confirmation </label>
+            <input type=password name="password"><br>     
         <br>
         <input type=submit value="Sign Up"><br>
     <form>
@@ -13,7 +32,7 @@
 
 <style>
     .signup {
-        text-align: center;
+        text-align: left;
         margin-top: 10%;
         margin-bottom: 20%;
         margin-left: 35%;
@@ -27,8 +46,13 @@
 
     .signup input{
         border: 2px solid #99dcf7; 
-        border-radius: 10px;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        float: center;
+        width: 100%;
     }
+
+ 
 
 </style>
 

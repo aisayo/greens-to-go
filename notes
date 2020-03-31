@@ -1,61 +1,27 @@
-[] - User can create, read, update and delete an order
+classes => 
 
-Interface:
-- User can view order form 
-- User can submit order form
-- User can edit order 
-- User can delete/cancel order 
-
-User class
-    x attributes => name, password
-    x user signs up/logs in 
-    x has many orders 
-
-User controller and views
-    x '/users/signup' => renders sign up form
-    x '/users/signup' => processes sign up form, creates user, post
-    x '/users/login' => renders login form 
-    x '/users/login' => processes login form, post 
-    x need to set sessions
-    x user can view their orders, '/users/:id/orders'
-
-Orders class
-    x attributes => address, item, item_price, total
-    x order belongs to user
-
-Order controller and views
-    x '/orders/new => renders new order form
-    x '/orders' => submits order 
-    x '/orders' => renders all orders
-    x '/orders/:id => renders one instance
-    x '/orders/:id/edit => renders update form for an instance
-    x '/orders/:id => updates instance, patch 
-    - '/orders/:id:/delete' => deletes instance
+    user: 
+    
+        actions: 
+            creates account
+            has a profile
+            puts in orders
 
 
-where to start?
+        associations:     
+            has many orders 
+            has many menu_items through orders 
 
-x set up classes
-x set up my database 
-- users controller 
-- orders controller 
-
-
-Sessions:
-
-1. enable sessions
-2. utilize sessions hash in the methods that persist user data into application
-
-
-
-authentication:
-1. bcrypt gem 
-2. user model, has_secure_password 
-3. change our users table, password => password_digest
+        attributes: 
+            first name
+            last name
+            address line 1 
+            address line 2
+            city
+            state
+            zip
+            telephone
+            
 
 
-Goals:
-    - fix navbar
-    - fix sign up form 
-    - add welcome text to home page 
-    - 
+    orders: 
