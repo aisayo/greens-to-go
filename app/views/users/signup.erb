@@ -1,10 +1,18 @@
 <div class="signup">
+
+    <div class="flash_alert">
+        <% if flash[:alert] %>
+        <%= flash[:alert] %>
+        <% end %>
+    </div>
+
+
     <h1> Create an Account </h1>
 
     <form action='/users/signup' method="POST">
-        <label> First Name </label>
+        <label> First Name* </label>
             <input type=text name="first_name"><br>
-        <label> Last Name </label>
+        <label> Last Name* </label>
             <input type=text name="last_name"><br>
         <label> Address Line 1 </label>
             <input type=text name="address_1"><br>
@@ -16,13 +24,13 @@
             <input type=text name="state"><br>
         <label> Zip/Postal Code </label>
             <input type=number name="zip"><br>
-        <label> Username </label>
+        <label> Username* </label>
             <input type=text name="username"><br>
-        <label> Email </label>
+        <label> Email* </label>
             <input type=text name="email"><br>
-        <label> Password </label>
+        <label> Password* </label>
             <input type=password name="password"><br>
-        <label> Password Confirmation </label>
+        <label> Password Confirmation* </label>
             <input type=password name="password"><br>     
         <br>
         <input type=submit value="Sign Up"><br>
@@ -50,6 +58,10 @@
         margin-top: 5px;
         float: center;
         width: 100%;
+    }
+
+    .signup .flash_alert{
+        color: red;
     }
 
  

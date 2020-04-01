@@ -1,15 +1,17 @@
 class UserController < ApplicationController
 
     get '/users/signup' do 
-      if !logged_in? 
-         erb :'/users/signup'
-      else  
+      if logged_in? 
          redirect "/users/#{session[:user_id]}"
+      else
+         erb :'/users/signup'        
       end 
     end 
 
     post '/users/signup' do
-      if params[:username] == "" && params[:password] == ""
+      if params[:first_name] == "" && params[:last_name] == "" && 
+         params[:username] == "" && params[:email] == "" && params[:password] == ""
+         flash[:alert] = "Please enter all required fields"
          redirect "/users/signup"
       else 
          @user = User.create(
