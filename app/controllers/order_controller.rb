@@ -4,6 +4,7 @@ class OrderController < ApplicationController
         if logged_in?
             erb :'/orders/new'
         else 
+            flash[:alert] = "Please login to place an order"
             redirect "/users/login"
         end 
     end 

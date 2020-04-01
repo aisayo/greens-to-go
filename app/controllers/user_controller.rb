@@ -2,7 +2,7 @@ class UserController < ApplicationController
 
     get '/users/signup' do 
       if logged_in? 
-         redirect "/users/#{session[:user_id]}"
+         redirect "/users/#{current_user.id}"
       else
          erb :'/users/signup'        
       end 
@@ -36,13 +36,11 @@ class UserController < ApplicationController
       end 
      end 
 
-
      get '/users/login' do 
-      if !logged_in? 
-         erb :'/users/login'
+      if logged_in?   
+         redirect "/users/#{current_user.id}"  
       else
-         @user = User.find(session[:user_id])
-         redirect "/users/#{@user.id}"
+         erb :'/users/login'
       end 
      end 
 
