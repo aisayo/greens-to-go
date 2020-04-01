@@ -14,12 +14,25 @@ class UserController < ApplicationController
          flash[:alert] = "Please enter all required fields"
          redirect "/users/signup"
       else 
-         @user = User.create(
-         username: params[:username], 
-         password: params[:password]
-      )
-         session[:user_id] = @user.id 
-         redirect "/users/#{@user.id}"
+         if params[:password] == params[:password_confirmation]
+            @user = User.create(
+               first_name: params[:first_name],
+               last_name: params[:last_name],
+               address_line_1: params[:address_1],
+               address_line_2: params[:address_2],
+               city: params[:city],
+               state: params[:state],
+               zip: params[:zip],
+               username: params[:username],
+               email: params[:email],
+               password: params[:password],
+            )
+            session[:user_id] = @user.id 
+            redirect "/users/#{@user.id}"
+         else 
+            flash[:alert] = "Passwords do not match"
+            redirect "/users/signup"
+         end 
       end 
      end 
 
@@ -32,7 +45,6 @@ class UserController < ApplicationController
          redirect "/users/#{@user.id}"
       end 
      end 
-
 
      post '/users/login' do 
       @user = User.find_by(username: params[:username])
