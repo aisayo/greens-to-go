@@ -1,10 +1,17 @@
-<h1> This is the order form </h1>
+<div class="order_form">
+
+    <h1> Place an Order </h1>
 
 
-<form action='/orders' method="POST">
-    Address: <input type=text name="address">
-    Item: <input type=text name="item">
-    Item_price: <input type=number name="item_price">
-    Total: <input type=number name="total">
-    <input type=submit>
-<form>
+    <form action='/orders' method="POST">
+        Order Num: <br>
+        Order Date: <%= Time.now.strftime("%m/%d/%Y") %><br>
+        Item: <input type=text name="food_item"><br>
+        Item_price: <input type=number name="item_price"><br>
+        Quantity: <input type=number name="quantity"><br>
+        Total: <input type=number name="total"><br>
+        <input type=submit>
+    <form>
+
+</div>
+

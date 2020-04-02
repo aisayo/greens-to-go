@@ -1,8 +1,10 @@
-<h1> Our Menu! </h1>
+<div class="menu">
+    <h1> Our Menu! </h1>
 
 
-<% @menu_items.each do |i| %>
-    <%= i.item %><br>
-    <%= i.description %><br>
-    $<%= i.price %><br>
-<% end %>
+    <% @menu_items.each do |i| %>
+        <%= i.item %><br>
+        <%= i.description %><br>
+        $<%= i.price %><br>
+    <% end %>
+</div>
