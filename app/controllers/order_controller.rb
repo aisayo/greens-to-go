@@ -47,7 +47,7 @@ class OrderController < ApplicationController
 
     delete '/orders/:id' do
         @order = Order.find(params[:id])
-        @order.destroy
+        @order.delete
         redirect '/orders'
     end 
 

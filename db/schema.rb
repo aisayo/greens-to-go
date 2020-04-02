@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200331195829) do
+ActiveRecord::Schema.define(version: 20200402155919) do
+
+  create_table "orders", force: :cascade do |t|
+    t.boolean  "completed?"
+    t.datetime "order_date"
+    t.string   "food_item"
+    t.integer  "quantity"
+    t.integer  "user_id"
+    t.integer  "total"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string  "first_name"

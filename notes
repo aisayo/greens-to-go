@@ -25,3 +25,20 @@ classes =>
 
 
     orders: 
+
+        actions: 
+            can be submitted per user
+            will be pending or completed 
+        
+        assocations: 
+            belongs to user 
+            has many menu_items 
+        
+        attributes:
+            completed? - boolean
+            order_date
+            food_item 
+            quantity 
+            total 
+            user_id 
+
