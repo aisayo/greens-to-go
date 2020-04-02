@@ -11,11 +11,12 @@ class OrderController < ApplicationController
 
     post '/orders' do 
         @order = Order.create(
-            address: params[:address], 
-            item: params[:item], 
-            item_price: params[:item_price], 
-            total: params[:total]
+            order_date: params[:order_date], 
+            food_item: params[:food_item], 
+            quantity: params[:quantity]
         )
+        @order.user = current_user
+        @order.total = params[:item_price] * @order.quantity
         redirect "/orders/#{@order.id}"
     end 
 

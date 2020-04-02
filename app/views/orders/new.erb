@@ -5,11 +5,26 @@
 
     <form action='/orders' method="POST">
         Order Num: <br>
-        Order Date: <%= Time.now.strftime("%m/%d/%Y") %><br>
+        <br>
+        Order Date: <input name="order_date" value="<%= Time.now.strftime("%m/%d/%Y") %>"><br>
+        <br>
         Item: <input type=text name="food_item"><br>
+        <br>
         Item_price: <input type=number name="item_price"><br>
-        Quantity: <input type=number name="quantity"><br>
-        Total: <input type=number name="total"><br>
+        <br>
+        Quantity: 
+            <select name="quantity">
+                <option/>
+                <% (1..10).each do |num| %>                    
+                    <option value=<%= num %>>
+                        <%= num %>
+                    </option>                
+                <% end %>
+            </select>            
+            <br>
+            <br>
+        Total: <br>
+        <br>
         <input type=submit>
     <form>
 
