@@ -55,6 +55,9 @@ class OrderController < ApplicationController
         "this is an about page"
     end 
 
-
+    get '/menu' do 
+        @menu_items = MenuItem.all
+        erb :'/menu_items/show'
+    end 
 
 end 

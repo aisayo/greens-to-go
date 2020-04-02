@@ -1,0 +1,8 @@
+<h1> Our Menu! </h1>
+
+
+<% @menu_items.each do |i| %>
+    <%= i.item %><br>
+    <%= i.description %><br>
+    $<%= i.price %><br>
+<% end %>
