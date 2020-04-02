@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200402155919) do
+ActiveRecord::Schema.define(version: 20200402163515) do
+
+  create_table "menu_items", force: :cascade do |t|
+    t.string  "item"
+    t.integer "price"
+    t.string  "description"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.boolean  "completed?"

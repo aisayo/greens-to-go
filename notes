@@ -42,3 +42,16 @@ classes =>
             total 
             user_id 
 
+
+    menu_items:
+
+        actions:
+            provides items to display on menu
+
+        associations:
+            ??
+        
+        attributes:
+            item
+            price
+            description
