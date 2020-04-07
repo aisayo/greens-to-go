@@ -13,10 +13,10 @@ class OrderController < ApplicationController
         @order = Order.create(
             order_date: params[:order_date], 
             food_item: params[:food_item], 
-            quantity: params[:quantity]
+            quantity: params[:quantity],
+            total: params[:item_price].to_i * params[:quantity].to_i
         )
-        @order.user = current_user
-        @order.total = params[:item_price] * @order.quantity
+        current_user.orders << @order 
         redirect "/orders/#{@order.id}"
     end 
 
