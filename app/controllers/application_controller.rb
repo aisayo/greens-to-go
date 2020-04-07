@@ -18,6 +18,11 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  get '/menu' do 
+    @menu_items = MenuItem.all
+    erb :'/menu_items/show'
+  end 
+
 
   helpers do 
 

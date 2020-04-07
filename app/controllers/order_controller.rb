@@ -50,15 +50,7 @@ class OrderController < ApplicationController
         @order = Order.find(params[:id])
         @order.delete
         redirect '/orders'
-    end 
+    end  
 
-    get '/about' do 
-        "this is an about page"
-    end 
-
-    get '/menu' do 
-        @menu_items = MenuItem.all
-        erb :'/menu_items/show'
-    end 
 
 end 
